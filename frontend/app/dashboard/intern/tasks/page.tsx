@@ -275,6 +275,7 @@ export default function TaskBoard() {
 
         {/* ── List View ── */}
         {viewMode === 'list' && (
+        <>
         {/* ── Task List ── */}
         {loading ? (
           <div className="flex justify-center py-16">
@@ -378,7 +379,6 @@ export default function TaskBoard() {
         )}
 
         {/* ── Propose New Task Dashed Card (List View Only) ── */}
-        {viewMode === 'list' && (
         <button
           onClick={() => setShowProposeModal(true)}
           className="w-full bg-white border-2 border-dashed border-slate-200 hover:border-amber-400 rounded-2xl py-7 flex flex-col items-center gap-2 transition-all group cursor-pointer shadow-sm"
@@ -393,6 +393,7 @@ export default function TaskBoard() {
             <p className="text-xs text-slate-400 font-medium">Subject to administrator approval</p>
           </div>
         </button>
+        </>
         )}
 
         {/* ── Floating Action Button ── */}
