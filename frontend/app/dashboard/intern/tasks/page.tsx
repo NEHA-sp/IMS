@@ -275,7 +275,6 @@ export default function TaskBoard() {
 
         {/* ── List View ── */}
         {viewMode === 'list' && (
-        <>
         {/* ── Task List ── */}
         {loading ? (
           <div className="flex justify-center py-16">
@@ -394,7 +393,6 @@ export default function TaskBoard() {
             <p className="text-xs text-slate-400 font-medium">Subject to administrator approval</p>
           </div>
         </button>
-        </>
         )}
 
         {/* ── Floating Action Button ── */}
