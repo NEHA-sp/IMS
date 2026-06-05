@@ -64,7 +64,7 @@ export default function TaskTemplateManager({ onSelectTemplate, showCreateOnly =
     setError('');
 
     try {
-      const newTemplate = await api.post('/templates', formData);
+      const newTemplate = await api.post<TaskTemplate>('/templates', formData);
       setTemplates([newTemplate, ...templates]);
       setFormData({
         name: '',
@@ -219,7 +219,7 @@ export default function TaskTemplateManager({ onSelectTemplate, showCreateOnly =
               <div className="flex-1">
                 <p className="text-xs font-bold text-slate-900">{template.name}</p>
                 <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-1">
-                  {template.titleTemplate}
+                  {template.title_template}
                 </p>
                 <div className="flex items-center gap-2 mt-1.5">
                   <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${
